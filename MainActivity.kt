@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             try{
-                var gelenmaas = editTextSalary.text.toString().toDouble()
-                var gelenSaat = editTextHour.text.toString().toDouble()
+                var incOvertime = editTextSalary.text.toString().toDouble()
+                var incHour = editTextHour.text.toString().toDouble()
 
-                var adimBir = gelenSaat - 45
-                var adimIki = ((gelenmaas / 225) * 1.5) * adimBir
+                var stepOne = incHour - 45
+                var stepTwo = ((incOvertime / 225) * 1.5) * stepOne
 
-                textView.text = adimIki.toInt().toString()
+                textView.text = stepTwo.toInt().toString()
             }catch(e: Exception){
                 Toast.makeText(this,"Missing or incorrect data entry",Toast.LENGTH_SHORT).show()
             }
