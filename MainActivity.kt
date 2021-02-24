@@ -1,4 +1,3 @@
-package com.example.mesaihesaplama
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
